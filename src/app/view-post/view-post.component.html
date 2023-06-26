@@ -1,0 +1,18 @@
+<div class="post-container">
+    <img class="post-poster" [src]="post.poster" [alt]="post.postDescription" />
+    <h2>{{ post.postDescription}}</h2>
+    <div class="button-container">
+      <div class="left-buttons">
+        <button mat-icon-button color="accent" type="submit" (click)="editpost(post.id)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" type="submit" (click)="delpost(post.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="right-buttons">
+        <app-like-counter></app-like-counter>
+      </div>
+    </div>
+  </div>
+  

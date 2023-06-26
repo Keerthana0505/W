@@ -1,0 +1,39 @@
+.post-container {
+    background-color: rgb(201, 157, 183);
+    width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 16px;
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-bottom: 30px;
+    padding-bottom: 10px;
+    gap: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  .post-poster {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
+ 
+  
+  .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .left-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .right-buttons {
+    margin-left: auto;
+  }
+  

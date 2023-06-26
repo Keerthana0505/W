@@ -1,0 +1,52 @@
+<div class="post-Container">
+  <h2>Add a New post</h2>
+
+  <form [formGroup]="postForm" (ngSubmit)="addPost()" novalidate>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Image</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="poster"
+              placeholder="Enter the URL of the image"
+            />
+            <mat-error
+              *ngIf="
+                postForm.controls.poster.invalid &&
+                postForm.controls.poster.touched &&
+                postForm.controls.poster.errors?.['required']
+              "
+            >
+              URL is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+      <mat-form-field color="primary" class="example-full-width">
+        <mat-label>ADD post</mat-label>
+        <textarea
+          matInput
+          placeholder="Enter Caption"
+          formControlName="postDescription"
+          required
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="10"
+        ></textarea>
+        
+      </mat-form-field>
+      <button mat-icon-button color="primary" type="submit" [disabled]="postForm.invalid">
+        <mat-icon>add</mat-icon>
+      </button>
+      <mat-error
+        *ngIf="
+          postForm?.get('postDescription')?.invalid &&
+          postForm?.get('postDescription')?.touched
+        "
+      >
+        It could be great if you enter Caption for your post !!!
+      </mat-error>
+     
+    </div>
+    
+  </form>
+</div>
